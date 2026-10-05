@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auto Mecânica Pistão | Orçamento antes de qualquer serviço</title>
+<meta name="description" content="Mecânica geral: freios, suspensão, revisão, injeção eletrônica e ar-condicionado. Peça o orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#inicio"><span data-brand>Auto Mecânica Pistão</span></a>
+  <nav aria-label="Principal">
+    <a href="#servicos">Serviços</a>
+    <a href="#como">Como trabalhamos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn-sm" href="#orcamento">Pedir orçamento</a>
+</header>
+<div class="hazard" aria-hidden="true"></div>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Seu carro de volta à estrada, com o preço combinado antes de abrir o capô</h1>
+      <p>Mecânica geral para carros nacionais e importados. Marque o que o carro precisa na ordem de serviço ao lado e peça o orçamento pelo WhatsApp, sem sair de casa.</p>
+      <ul class="proof">
+        <li><b>90 dias</b> de garantia no serviço</li>
+        <li><b>Orçamento por escrito</b> aprovado por você</li>
+        <li><b>Peças trocadas</b> devolvidas na entrega</li>
+      </ul>
+    </div>
+
+    <form class="os" id="orcamento" novalidate>
+      <div class="os-head"><h2>Ordem de serviço</h2><span>Orçamento sem compromisso</span></div>
+      <fieldset>
+        <legend>O que o carro precisa?</legend>
+        <div class="checks">
+          <label class="chk"><input type="checkbox" name="serv" value="Revisão completa"><span>Revisão completa</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Troca de óleo e filtros"><span>Troca de óleo e filtros</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Freios"><span>Freios</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Suspensão e direção"><span>Suspensão e direção</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Alinhamento e balanceamento"><span>Alinhamento e balanceamento</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Injeção eletrônica e scanner"><span>Injeção e scanner</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Ar-condicionado"><span>Ar-condicionado</span></label>
+          <label class="chk"><input type="checkbox" name="serv" value="Bateria e parte elétrica"><span>Bateria e elétrica</span></label>
+        </div>
+      </fieldset>
+      <label class="field">Veículo
+        <input name="carro" placeholder="Ex.: Gol 1.0, 2014" autocomplete="off">
+      </label>
+      <label class="field">Descreva o problema (opcional)
+        <textarea name="obs" rows="2" placeholder="Ex.: barulho ao frear, luz da injeção acesa"></textarea>
+      </label>
+      <button class="btn btn-block" type="submit">Pedir orçamento pelo WhatsApp</button>
+      <p class="error" id="err" role="alert" hidden>Marque ao menos um serviço ou descreva o problema.</p>
+    </form>
+  </section>
+
+  <section id="servicos" class="block">
+    <h2>Serviços e prazos</h2>
+    <p class="lead">Prazos para um carro de passeio sem complicações. Se aparecer algo a mais durante o serviço, avisamos e você decide antes de qualquer cobrança extra.</p>
+    <dl class="list">
+      <div><dt>Troca de óleo e filtros</dt><dd>Óleo conforme o manual, filtros de óleo, ar e combustível.</dd><dd class="time">40 min</dd></div>
+      <div><dt>Freios</dt><dd>Pastilhas, discos, lonas, cabos e fluido. Teste de frenagem na entrega.</dd><dd class="time">2 h</dd></div>
+      <div><dt>Suspensão e direção</dt><dd>Amortecedores, buchas, pivôs, terminais e caixa de direção.</dd><dd class="time">3 h</dd></div>
+      <div><dt>Alinhamento e balanceamento</dt><dd>Equipamento computadorizado, com laudo antes e depois.</dd><dd class="time">1 h</dd></div>
+      <div><dt>Injeção eletrônica e scanner</dt><dd>Leitura de códigos de falha e diagnóstico da luz da injeção.</dd><dd class="time">1 h</dd></div>
+      <div><dt>Ar-condicionado</dt><dd>Higienização, troca do filtro de cabine, carga de gás e teste de vazamento.</dd><dd class="time">2 h</dd></div>
+      <div><dt>Bateria e parte elétrica</dt><dd>Teste de bateria e alternador, troca de lâmpadas e reparo de fiação.</dd><dd class="time">1 h</dd></div>
+      <div><dt>Revisão completa</dt><dd>Checklist de 40 itens por escrito, com o que está bom e o que precisa de atenção.</dd><dd class="time">1 dia</dd></div>
+    </dl>
+    <p class="brands">Atendemos Chevrolet, Fiat, Volkswagen, Ford, Toyota, Honda, Hyundai, Renault e outras marcas. Para importados e híbridos, consulte antes.</p>
+  </section>
+
+  <section id="como" class="block block-dark">
+    <h2>Como trabalhamos</h2>
+    <ol class="steps">
+      <li><h3>Diagnóstico</h3><p>Escutamos você, fazemos o teste de rodagem e conectamos o scanner antes de falar em peça.</p></li>
+      <li><h3>Orçamento por escrito</h3><p>Peças, mão de obra e prazo no papel. O serviço só começa depois do seu "pode fazer".</p></li>
+      <li><h3>Serviço</h3><p>Peças de qualidade, com nota fiscal, e fotos do que foi encontrado quando houver desgaste.</p></li>
+      <li><h3>Entrega</h3><p>Você recebe as peças trocadas, a explicação do que foi feito e 90 dias de garantia.</p></li>
+    </ol>
+  </section>
+
+  <section id="contato" class="block">
+    <h2>Onde nos encontrar</h2>
+    <div class="contact">
+      <div>
+        <h3>Endereço</h3>
+        <p>Rua do Comércio, 45<br>Distrito Industrial, Sua Cidade</p>
+        <p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Rua+do+Com%C3%A9rcio+45" target="_blank" rel="noopener">Abrir no Google Maps</a></p>
+      </div>
+      <div>
+        <h3>Horário</h3>
+        <table>
+          <tr><th scope="row">Segunda a sexta</th><td>8h às 18h</td></tr>
+          <tr><th scope="row">Sábado</th><td>8h às 12h</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>WhatsApp</h3>
+        <p><a class="link" data-wa="Olá! Tenho uma dúvida sobre o meu carro." data-phone href="https://wa.me/5500900000000">(00) 90000-0000</a></p>
+        <p>Pode mandar foto ou vídeo do problema. Ajuda no diagnóstico.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="hazard" aria-hidden="true"></div>
+<footer class="foot">
+  <span data-brand>Auto Mecânica Pistão</span>
+  <span>Site de demonstração com conteúdo de exemplo.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
