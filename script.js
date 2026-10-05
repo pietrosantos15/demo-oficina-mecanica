@@ -1,4 +1,4 @@
-/* Personalização por link: ?wa=5511999998888&nome=Nome%20da%20Oficina */
+/* Personalização por link: ?wa=5511999998888&nome=Nome%20da%20Rede */
 const params = new URLSearchParams(location.search);
 const WA = (params.get("wa") || "5500900000000").replace(/\D/g, "");
 const NOME = params.get("nome");
@@ -11,7 +11,7 @@ const fmtPhone = n => {
 
 if (NOME) {
   document.querySelectorAll("[data-brand]").forEach(el => (el.textContent = NOME));
-  document.title = NOME + " | Orçamento antes de qualquer serviço";
+  document.title = NOME + " | Rede de serviço automotivo";
 }
 document.querySelectorAll("a[data-wa]").forEach(a => (a.href = waUrl(a.dataset.wa)));
 if (params.get("wa")) document.querySelectorAll("[data-phone]").forEach(el => (el.textContent = fmtPhone(WA)));
@@ -20,14 +20,17 @@ if (params.get("wa")) document.querySelectorAll("[data-phone]").forEach(el => (e
 const form = document.getElementById("orcamento");
 form.addEventListener("submit", e => {
   e.preventDefault();
+  const v = n => form[n].value.trim();
   const servs = [...form.querySelectorAll("input[name=serv]:checked")].map(i => i.value);
-  const carro = form.carro.value.trim(), obs = form.obs.value.trim();
+  const obs = v("obs");
   const err = document.getElementById("err");
   err.hidden = servs.length > 0 || !!obs;
   if (!servs.length && !obs) return;
+  const carro = [v("marca"), v("modelo"), v("ano")].filter(Boolean).join(" ");
   let msg = "Olá! Gostaria de um orçamento";
   if (carro) msg += ` para o meu ${carro}`;
   msg += ".";
+  if (v("placa")) msg += `\nPlaca: ${v("placa").toUpperCase()}`;
   if (servs.length) msg += `\nServiços: ${servs.join(", ")}.`;
   if (obs) msg += `\nProblema: ${obs}`;
   window.open(waUrl(msg), "_blank", "noopener");
